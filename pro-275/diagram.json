@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Parzival",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -75.33, "left": 17.34, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -228,
+      "left": 107.4,
+      "attrs": { "volume": "0.5" }
+    },
+    { "type": "wokwi-ir-remote", "id": "remote1", "top": -163.2, "left": -288, "attrs": {} },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": -97.35, "left": -107.38, "attrs": {} }
+  ],
+  "connections": [
+    [ "bz1:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "ir1:GND", "uno:GND.3", "black", [ "v176.27", "h257.63" ] ],
+    [ "ir1:VCC", "uno:5V", "red", [ "v158.25", "h230.4" ] ],
+    [ "ir1:DAT", "uno:8", "green", [ "v24.98", "h44.32", "v-104.45", "h183.69" ] ],
+    [ "bz1:2", "uno:10", "green", [ "v15.81", "h19.06" ] ]
+  ],
+  "dependencies": {}
+}
